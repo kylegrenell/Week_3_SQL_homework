@@ -108,7 +108,7 @@ PASTED ANSWERS
 
   20. Select all of the user names and the count of shows they're going to see.
 
-  SELECT users.name, COUNT(*) FROM shows_users INNER JOIN users ON shows_users.user_id = users.id GROUP BY users.name;
+  SELECT users.name, COUNT(*) FROM shows_users INNER JOIN users ON shows_users.user_id = users.id GROUP BY name;
 
   21. SELECT all users who are going to a show at 17:15.
 
