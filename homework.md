@@ -48,8 +48,8 @@ PASTED ANSWERS
   DELETE FROM users WHERE name = 'Valerie Gibson';
 
   7. Deletes the shows for the user you just deleted.
-  
-  DELETE FROM shows_users WHERE show_id = 12;
+
+  DELETE FROM shows_users WHERE user_id = 25 AND show_id = 12;
 
 ## Section 2
 
@@ -57,21 +57,41 @@ PASTED ANSWERS
 
   9. Select the names and prices of all shows, ordered by price in ascending order.
 
+  SELECT name, price FROM shows ORDER BY shows.price ASC;
+
   10. Select the average price of all shows.
+
+  SELECT AVG (price) FROM shows;
 
   11. Select the price of the least expensive show.
 
+  SELECT MIN (price) FROM shows;
+
   12. Select the sum of the price of all shows.
+
+  SELECT SUM (price) FROM shows;
 
   13. Select the sum of the price of all shows whose prices is less than £20.
 
+  SELECT SUM (price) FROM shows WHERE price < 20;
+
   14. Select the name and price of the most expensive show.
+
+  SELECT name, price FROM shows WHERE price = ( SELECT MAX (price) FROM shows );
 
   15. Select the name and price of the second from cheapest show.
 
+  SELECT MAX (price) FROM shows WHERE price < ( SELECT MAX (price) FROM shows );
+                  -- don't fully see how this selects second highest value? 
+
   16. Select the names of all users whose names start with the letter "N".
 
+  -- SELECT name FROM users WHERE name = 'N%';    --wildcard N% for starting with
+
   17. Select the names of users whose names contain "er".
+
+  SELECT name FROM users WHERE name = '%er%';     --wildcard %er% for containing
+
 
 
 ## Section 3
