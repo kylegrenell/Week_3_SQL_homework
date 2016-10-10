@@ -24,18 +24,31 @@ PASTED ANSWERS
   Revision of concepts that we've learnt in SQL today
 
   1. Select the names of all users.
+
   SELECT name FROM users;
+
   2. Select the names of all shows that cost less than £15.
+
   SELECT price FROM shows WHERE price < 15;
+
   3. Insert a user with the name "Val Gibson" into the users table.
+
   INSERT INTO users (name) VALUES ('Val Gibson');
+
   4. Insert a record that Val Gibson wants to attend the show "Two girls, one cup of comedy".
+
   INSERT INTO shows_users (show_id, user_id) VALUES (12, 25);
+
   5. Updates the name of the "Val Gibson" user to be "Valerie Gibson".
+
   UPDATE users SET name = 'Valerie Gibson' where name = 'Val Gibson';
+
   6. Deletes the user with the name 'Valerie Gibson'.
+
   DELETE FROM users WHERE name = 'Valerie Gibson';
+
   7. Deletes the shows for the user you just deleted.
+  
   DELETE FROM shows_users WHERE show_id = 12;
 
 ## Section 2
