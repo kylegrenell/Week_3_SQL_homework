@@ -172,7 +172,7 @@ INSERT INTO "shows_users" (show_id, user_id) VALUES (11, 21);
 -- SECTION 3
 -- SELECT time FROM times WHERE show_id = 8;
 -- SELECT COUNT(user_id) FROM shows_users WHERE show_id = 2;
--- SELECT users.name, COUNT(*) FROM shows_users INNER JOIN users ON shows_users.user_id = users.id GROUP BY users.name;
+SELECT users.name, COUNT(*) FROM shows_users INNER JOIN users ON shows_users.user_id = users.id GROUP BY name;
 
 
 
