@@ -100,8 +100,20 @@ PASTED ANSWERS
 
   18. Select the time for the Edinburgh Royal Tattoo.
 
+  SELECT time FROM times WHERE show_id = 8;
+
   19. Select the number of users who want to see "Shitfaced Shakespeare".
+
+  SELECT COUNT(user_id) FROM shows_users WHERE show_id = 2;
 
   20. Select all of the user names and the count of shows they're going to see.
 
+  SELECT users.name, COUNT(*) FROM shows_users INNER JOIN users ON shows_users.user_id = users.id GROUP BY users.name;
+
   21. SELECT all users who are going to a show at 17:15.
+
+  Ehhhhhhh. Too many Inner Joins for me tonight sorry.
+ 
+
+
+
